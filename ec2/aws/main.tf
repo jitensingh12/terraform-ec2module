@@ -17,9 +17,14 @@ resource "aws_instance" "web" {
         device_name = "/dev/sdb"
     }
 
-    tags = {
-      created_by = "terraform"
-      time = timestamp()
-    }
-  
+    #tags = {
+    #  created_by = "terraform"
+    #  time = timestamp()
+    #}
+    tags = "${merge(var.tags,
+      tomap({
+          kk = "jit"
+      })
+    )
+  }"
 }

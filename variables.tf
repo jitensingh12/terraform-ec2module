@@ -17,6 +17,10 @@ variable "subnet" {
   #default = [ "" ] 
 }
 
+variable "tags" {
+  type = map
+}
+
 #variable "availability_zone" {
 #    type = string
 #  

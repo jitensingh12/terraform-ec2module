@@ -36,3 +36,7 @@ variable "secondry_disk" {
 variable "instance_type" {
     type = string  
 }
+
+variable "tags" {
+    type = map
+}

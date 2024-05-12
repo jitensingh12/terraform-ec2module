@@ -9,6 +9,8 @@ module "ec2-instance" {
   secondry_disk      = var.secondry_disk
   key_name           = var.key_name
   security_group_ids = var.security_group_ids
+  tags = "${merge(var.tags, { appy = "AI" })
+  }"
 
   # insert the 4 required variables here
 
