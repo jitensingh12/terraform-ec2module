@@ -1,6 +1,7 @@
 module "ec2-instance" {
   source = "./ec2/aws"
   #name               = "test instance"
+  # iam adding this comment
   status             = var.status
   subnet             = var.subnet
   ami                = var.ami
